@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { LatLng, latLng } from 'leaflet';
-import { mapOptions } from '../../../../core/constants/leaflet-map.constants';
+import { mapOptions } from 'constants/leaflet-map.constants';
 
 @Component({
   selector: 'leaflet-map-container',

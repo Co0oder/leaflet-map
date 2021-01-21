@@ -6,6 +6,8 @@ import { ApiService } from 'src/app/api/api.service';
 import { HttpClientModule }   from '@angular/common/http';
 import { HomePageModule } from './fitures/home-page/home-page.module';
 import { CommonModule } from '@angular/common';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatButtonModule} from '@angular/material/button';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { CommonModule } from '@angular/common';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    HomePageModule
+    BrowserAnimationsModule,
+    MatButtonModule,
+    HomePageModule,
   ],
   providers: [ApiService],
   bootstrap: [AppComponent]

@@ -2,9 +2,9 @@ import { Component, Input, OnInit } from '@angular/core';
 import { Marker, LatLng, latLng } from 'leaflet';;
 import { Observable } from 'rxjs';
 import { ApiService } from 'src/app/api/api.service';
-import { LocationService } from '../../../../core/services/location.service';
-import { IBonuse } from '../../../../core/interfaces';
-import { MarkersService } from '../../../../core/services/markers.service';
+import { LocationService } from 'services/location.service';
+import { MarkersService } from '../../services/markers.service';
+import { IBonuse } from 'interfaces/index';
 
 @Component({
   selector: 'leaflet-map-view',
