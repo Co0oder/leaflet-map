@@ -1,12 +1,17 @@
-import { ILocation } from './location.interface';
+export interface ILocation{
+    latitude: number,
+    longitude: number,
+    city: string,
+    country: string,
+    address: string
+}
 
-interface ICompany{
+export interface ICompany{
     name: string,
     phone: string,
     email: string
 }
-
-export interface IBonuse {
+export interface IBonus {
     id: number,
     dateStart: string,
     dateEnd: string,

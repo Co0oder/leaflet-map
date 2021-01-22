@@ -42,8 +42,8 @@
  "discount": 27,
  "locations": [{
      "id": 1,
-     "latitude": 53.8930095,
-     "longitude": 27.5674444,
+     "latitude": 48.6473728,
+     "longitude": 29.7402368,
      "city":"Minsk",
      "country":"Belarus",
      "address":"st. Petra Glebki 5"

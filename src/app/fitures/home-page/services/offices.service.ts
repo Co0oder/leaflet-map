@@ -27,9 +27,9 @@ export class MarkersService{
         return markers;
     }
 
-    createMarkersFromBonuses(bonuses: IBonus[]): Marker[]{
+    createMarkersFromBonuss(bonuss: IBonus[]): Marker[]{
         let markers: Marker[] = [];
-        bonuses.map((bonus: IBonus) => {
+        bonuss.map((bonus: IBonus) => {
             let bonusLocationsMarkers = this.bonusLocationsMarkersGenerator(bonus);
             markers = [...markers, ...bonusLocationsMarkers];
         });

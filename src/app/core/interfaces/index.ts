@@ -1,7 +1,7 @@
-import { IBonuse }  from './bonuse.interface'
-import { ILocation }  from './location.interface';
+import { IBonus, ILocation, ICompany }  from './bonus.interface'
 
 export { 
-    IBonuse, 
-    ILocation
+    IBonus, 
+    ILocation,
+    ICompany
 };

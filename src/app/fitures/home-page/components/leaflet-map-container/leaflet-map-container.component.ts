@@ -8,9 +8,9 @@ import { mapOptions } from 'constants/leaflet-map.constants';
   styleUrls: ['./leaflet-map-container.component.scss']
 })
 export class LeafletMapContainerComponent implements OnInit {
-  @Input() center: LatLng = latLng(0.0000,0.0000);
+  @Input() center: LatLng = latLng(48.6473728,29.7402368);
   @Input() layers: any = [];
-  
+
   options ={ ...mapOptions, center: this.center };
 
   ngOnInit(): void {

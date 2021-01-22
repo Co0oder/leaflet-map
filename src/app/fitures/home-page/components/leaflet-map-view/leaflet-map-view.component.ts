@@ -1,10 +1,10 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Marker, LatLng, latLng } from 'leaflet';;
 import { Observable } from 'rxjs';
-import { ApiService } from 'src/app/api/api.service';
+import { ApiService } from 'services/api.service';
 import { LocationService } from 'services/location.service';
 import { MarkersService } from '../../services/markers.service';
-import { IBonuse } from 'interfaces/index';
+import { IBonus } from 'interfaces/index';
 
 @Component({
   selector: 'leaflet-map-view',
@@ -13,7 +13,7 @@ import { IBonuse } from 'interfaces/index';
 })
 export class LeafletMapViewComponent implements OnInit {
   userLocation$: LatLng | null = null; 
-  bonuses$: Observable<IBonuse[]>;
+  bonuses$: Observable<IBonus[]>;
   markers : Marker[];
 
   constructor(
@@ -26,8 +26,8 @@ export class LeafletMapViewComponent implements OnInit {
     this.location.getUserLocation();
     this.userLocation$ = latLng(0.000000,0.000000);
     this.bonuses$ = this.api.getBonuses();
-    this.bonuses$.subscribe((bonuses: IBonuse[]) => {
-      this.markers = this.markersService.createMarkersFromBonuses(bonuses);
+    this.bonuses$.subscribe((bonuss: IBonus[]) => {
+      this.markers = this.markersService.createMarkersFromBonuses(bonuss);
     })
   }
 }

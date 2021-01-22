@@ -1,7 +1,7 @@
 import { Injectable } from "@angular/core";
 import { LatLng, latLng } from 'leaflet';
-import { ApiService } from "src/app/api/api.service";
-import { IBonuse, ILocation } from "../interfaces";
+import { ApiService } from "services/api.service";
+import { IBonus, ILocation } from "../interfaces";
 
 @Injectable()
 export class LocationService{

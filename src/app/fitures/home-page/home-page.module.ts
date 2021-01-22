@@ -7,20 +7,29 @@ import { LeafletMapContainerComponent } from "./components/leaflet-map-container
 import { LeafletMapViewComponent } from "./components/leaflet-map-view/leaflet-map-view.component";
 import { PopupComponent } from "./components/popup-component/popup.component";
 import { createCustomElement } from "@angular/elements";
-import { MatButtonModule } from "@angular/material/button";
+import { ModalComponent } from './components/modal-component/modal.component'
+import { MatDialogModule} from "@angular/material/dialog";
+import {MatButtonModule} from '@angular/material/button';
+
 
 @NgModule({
     imports: [
         CommonModule,
+        MatButtonModule,
         LeafletModule,
+        MatDialogModule,
     ],
     declarations: [
         LeafletMapContainerComponent, 
         LeafletMapViewComponent,
         PopupComponent,
+        ModalComponent
     ],
     exports: [LeafletMapViewComponent],
-    providers: [MarkersService,LocationService],
+    providers: [
+        MarkersService,
+        LocationService,
+    ],
     entryComponents: [PopupComponent]
 })
 export class HomePageModule{
