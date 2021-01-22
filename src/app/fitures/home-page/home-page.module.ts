@@ -10,6 +10,7 @@ import { createCustomElement } from "@angular/elements";
 import { ModalComponent } from './components/modal-component/modal.component'
 import { MatDialogModule} from "@angular/material/dialog";
 import {MatButtonModule} from '@angular/material/button';
+import { OfficeService } from "./services/offices.service";
 
 
 @NgModule({
@@ -28,6 +29,7 @@ import {MatButtonModule} from '@angular/material/button';
     exports: [LeafletMapViewComponent],
     providers: [
         MarkersService,
+        OfficeService,
         LocationService,
     ],
     entryComponents: [PopupComponent]

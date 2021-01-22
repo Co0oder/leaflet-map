@@ -6,16 +6,16 @@ import { PopupComponent } from '../components/popup-component/popup.component'
 
 @Injectable()
 export class MarkersService{
-    markerIco = icon({
+    bonusMarkerIco = icon({
         iconUrl: '/assets/icons/marker.ico',
         iconSize:     [32, 32],
         iconAnchor:   [32, 32],
         popupAnchor:  [-15, -35]
-    });    
+    });
 
     bonusLocationsMarkersGenerator(bonus: IBonus): Marker[]{
         const markers: Marker[] = bonus.locations.map( location =>{
-            const newMarker: Marker = marker([location.latitude, location.longitude],{icon: this.markerIco});
+            const newMarker: Marker = marker([location.latitude, location.longitude],{icon: this.bonusMarkerIco});
             newMarker.bindPopup((layer) => { 
                 const popupEl: NgElement & WithProperties<PopupComponent> = document.createElement('popup-element') as any; 
                 popupEl.title = bonus.type;

@@ -1,8 +1,8 @@
 import { HttpClient} from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { map } from 'rxjs/operators';
-import { IBonus} from '../interfaces';
+import { catchError, map } from 'rxjs/operators';
+import { IBonus, IOffice} from '../interfaces';
 
 @Injectable()
 export class ApiService{
@@ -13,6 +13,15 @@ export class ApiService{
                 const bonusesList = response['data'];
                 return bonusesList;
             })
+        );
+    }
+
+    getOffices(): Observable<IOffice[]> {
+        return this.http.get('assets/static/offices.json').pipe(
+            map((response: any) => {
+                const offices = response['offices'];
+                return offices;
+            }),
         );
     }
 
