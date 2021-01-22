@@ -10,8 +10,8 @@ export class ApiService{
     getBonuses(): Observable<IBonus[]> {
         return this.http.get('assets/static/bonuses.json').pipe(
             map((response: any) => {
-                const bonussList = response['data'];
-                return bonussList;
+                const bonusesList = response['data'];
+                return bonusesList;
             })
         );
     }
